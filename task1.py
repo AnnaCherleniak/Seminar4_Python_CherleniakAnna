@@ -12,11 +12,15 @@ def transposition_matrix(matrix):
     return new_matrix
 
 
+def transposition_matrix_zip(matrix):
+    new_matrix = []
+    for row in zip(*my_matrix):
+        new_matrix.append(list(row))
+    return new_matrix
+
+
 my_matrix = [[1, 4, 7], [2, 5, 8]]
 print(my_matrix)
 print(transposition_matrix(my_matrix))
 # Второй вариант:
-transp_matrix = []
-for row in zip(*my_matrix):
-    transp_matrix.append(list(row))
-print(transp_matrix)
+print(transposition_matrix_zip(my_matrix))
