@@ -1,6 +1,7 @@
 # Напишите функцию для транспонирования матрицы
 # Пример: [[1, 2, 3], [4, 5, 6]] -> [[1,4], [2,5], [3, 6]]
 
+
 def transposition_matrix(matrix):
     new_matrix = []
     for i in range(len(matrix[0])):
@@ -14,3 +15,8 @@ def transposition_matrix(matrix):
 my_matrix = [[1, 4, 7], [2, 5, 8]]
 print(my_matrix)
 print(transposition_matrix(my_matrix))
+# Второй вариант:
+transp_matrix = []
+for row in zip(*my_matrix):
+    transp_matrix.append(list(row))
+print(transp_matrix)
